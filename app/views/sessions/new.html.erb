@@ -1,0 +1,19 @@
+<% provide(:title, "ログイン") %>
+<div class="signup">
+  <h1>ログイン</h1>
+  <div class="sign-up-form">
+    <%= form_for(:session, url: login_path) do |f| %>
+    
+          <%= f.label :email, "メールアドレス" %>
+          <%= f.email_field :email, class: 'form-control' %>
+    
+          <%= f.label :password, "パスワード" %>
+          <%= f.password_field :password, class: 'form-control' %>
+    
+          <%= f.submit "ログイン", class: "btn" %>
+    <% end %>
+    <p><%= link_to "アカウントを新しく作成", signup_path, class: "btn" %></p>
+  </div>
+</div>
+
+
